@@ -144,9 +144,3 @@ for (int i = 0; i < 3; i++) {
 ## 📜 Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
-
-## 👨‍💻 Autor
-
-Didier Valdivieso – Desarrollador del Proyecto
-
-
