@@ -1,76 +1,72 @@
-# 🎮 Tic-Tac-Toe en SFML
+# 🎮 Tic-Tac-Toe SFML
 
+## 📝 Description
 
+This is a Tic-Tac-Toe game developed in C++ using the SFML library. It implements an intuitive graphical interface and fluid gameplay mechanics, allowing keyboard interaction.
 
-## 📝 Descripción
+## 🚀 Highlighted Skills
 
-Este es un juego de Tic-Tac-Toe desarrollado en C++ utilizando la biblioteca SFML. Implementa una interfaz gráfica intuitiva y mecánicas de juego fluidas, permitiendo la interacción mediante teclado.
+- ✅ C++ programming.
 
+- ✅ Use of SFML for graphics and events.
 
-## 🚀 Habilidades Destacadas
+- ✅ Modular architecture with lambda functions.
 
-- ✅ Programación en C++.
+- ✅ Event handling and collision detection.
 
-- ✅ Uso de SFML para gráficos y eventos.
+- ✅ Development in Visual Studio 2022.
 
-- ✅ Arquitectura modular con lambda functions.
+- ✅ Creation of an interactive 2D experience.
 
-- ✅ Manejo de eventos y detección de colisiones.
+## 🎮 Features
 
-- ✅ Desarrollo en Visual Studio 2022.
+- 🏁 Drawing the grid and tick marks (X and O) using SFML.
 
-- ✅ Creación de una experiencia interactiva en 2D.
+- 🎯 Cursor control with WASD keys.
 
+- ✍️ Selecting boxes with the Spacebar.
 
-## 🎮 Características
+- 🔄 Restart the game with the Esc key.
 
-- 🏁 Dibujado de la cuadrícula y las marcas (X y O) mediante SFML.
+- 🏆 Win detection with highlighted line.
 
-- 🎯 Control del cursor con teclas WASD.
+## 🛠 Requirements
 
-- ✍️ Selección de casillas con la tecla Espacio.
+To compile and run the game, you need:
 
-- 🔄 Reinicio del juego con la tecla Esc.
+- ⚙️ SFML 2.6 installed on your system.
 
-- 🏆 Detección de victoria con línea resaltada.
+- 🖥 Visual Studio 2022 or a compatible C++ compiler.
 
-## 🛠 Requisitos
+## 📥 Installation and Running
 
-Para compilar y ejecutar el juego, necesitas:
-
-- ⚙️ SFML 2.6 instalado en tu sistema.
-
-- 🖥 Visual Studio 2022 o compilador C++ compatible.
-
-## 📥 Instalación y Ejecución
-
-### 1️⃣ Clonar el Repositorio
+### 1️⃣ Clone the Repository
 ```sh
 git clone https://github.com/tuusuario/tic-tac-toe-sfml.git
 cd tic-tac-toe-sfml
 ```
-### 2️⃣ Compilar el Proyecto (G++)
+### 2️⃣ Compile the Project (G++)
 ```sh
 g++ main.cpp -o TicTacToe -lsfml-graphics -lsfml-window -lsfml-system
 ```
-### 3️⃣ Ejecutar el Juego
+### 3️⃣ Run the Game
 ```sh
 ./TicTacToe
 ```
-## 🎮 Controles
+## 🎮 Controls
 
-| Acción                     | Tecla   |
+| Action                     | Key   |
 |:---------------------------|--------:|
-| ⬅️ Mover cursor izquierda  | A       |
-| ➡️ Mover cursor derecha    | D       |
-| ⬆️ Mover cursor arriba     | W       |
-| ⬇️ Mover cursor abajo      | S       |
-| ❌ Seleccionar casilla     | Espacio |
-| 🔄 Reiniciar juego        | Esc     |
+| ⬅️ Move cursor left       | A       |
+| ➡️ Move cursor right      | D       |
+| ⬆️ Move cursor up         | W       |
+| ⬇️ Move cursor down       | S       |
+| ❌ Select box             |SpaceBar |
+| 🔄 Restart game           | Esc     |
 
-## 🖥️ Fragmentos de Código Destacados
+## 🖥️ Featured Code Snippets
 
-🔹 Dibujado de la Cuadrícula
+🔹 Grid Drawing
 ```sh
 // Función lambda para dibujar la cuadrícula
 auto DrawGrid = [&](float space, float width, float position_x, float position_y) {
@@ -94,9 +90,9 @@ auto DrawGrid = [&](float space, float width, float position_x, float position_y
 };
 ```
 
-📌 Este fragmento usa una función lambda para dibujar la cuadrícula del juego dinámicamente.
+📌 This snippet uses a lambda function to dynamically draw the game grid.
 
-🔹 Manejo del Cursor y Entrada de Teclado
+🔹 Cursor Handling and Keyboard Input
 ```sh
 // Evento de teclado para mover el cursor
 if ((event.key.scancode == sf::Keyboard::Scancode::A) and (cursor_x > 0)) cursor_x--;
@@ -111,9 +107,9 @@ if ((event.key.scancode == sf::Keyboard::Scancode::Space) and (state[cursor_y][c
 }
 ```
 
-📌 Se utiliza la detección de eventos de SFML para permitir el control del cursor y la selección de casillas.
+📌 SFML event detection is used to enable cursor control and checkbox selection.
 
-🔹 Detección de Victoria
+🔹 Victory Detection
 ```sh
 // Comprobación de líneas horizontales y verticales
 for (int i = 0; i < 3; i++) {
@@ -126,21 +122,21 @@ for (int i = 0; i < 3; i++) {
 }
 ```
 
-📌 El juego detecta si un jugador ha ganado comprobando filas y columnas con el mismo símbolo.
+📌 The game detects if a player has won by checking rows and columns with the same symbol.
 
-## 📸 Capturas de Pantalla
+## 📸 Screenshots
 
 ![image](https://github.com/user-attachments/assets/fefe0674-f47e-4b03-8795-282efcd7ba4a)
 
-## 🔧 Posibles Mejoras
+## 🔧 Possible Improvements
 
-- 🎨 **Interfaz más atractiva**: Agregar animaciones y efectos visuales para mejorar la experiencia del usuario.
-- 🤖 **Inteligencia Artificial**: Implementar un modo para jugar contra la computadora con diferentes niveles de dificultad.
-- 🌍 **Modo Multijugador en Línea**: Integrar conexión en red para jugar contra otros jugadores a través de Internet.
-- 📱 **Versión Móvil**: Adaptar el juego para dispositivos móviles con controles táctiles.
-- 🔊 **Efectos de Sonido**: Añadir sonidos al seleccionar casillas o ganar una partida para hacer la experiencia más inmersiva.
-- 📊 **Sistema de Puntuación**: Guardar estadísticas de victorias y derrotas de cada jugador.
+- 🎨 **More Attractive Interface**: Add animations and visual effects to improve the user experience.
+- 🤖 **Artificial Intelligence**: Implement a mode to play against the computer with different difficulty levels.
+- 🌍 **Online Multiplayer Mode**: Integrate a network connection to play against other players over the internet.
+- 📱 **Mobile Version**: Adapt the game for mobile devices with touch controls.
+- 🔊 **Sound Effects**: Add sounds when selecting squares or winning a match to make the experience more immersive.
+- 📊 **Scoring System**: Save win and loss statistics for each player.
 
-## 📜 Licencia
+## 📜 License
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+This project is licensed under the MIT License. See the LICENSE file for details.
